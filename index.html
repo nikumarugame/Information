@@ -36,10 +36,6 @@
       </div>
     </header>
 
-    <div class="controls">
-      <button class="btn" id="downloadBtn">下载原文 .txt</button>
-      <div class="small">如果要把此页面上线，请参阅下方部署说明。</div>
-    </div>
 
     <div class="content" id="policyText">
 Terms of Service
@@ -243,33 +239,8 @@ Email: [ftdream1201@gmail.com]
 We will respond to your inquiry within a reasonable time (usually within 7-14 business days).
 
 Last Updated: [January 31, 2026]
-    </div>
 
-    <footer>
-      部署说明（推荐 GitHub Pages，简单免费）：
-      <ol>
-        <li>将此文件保存为 <code>index.html</code>，放到仓库根目录（或 gh-pages 分支根目录）���</li>
-        <li>在 GitHub 仓库页面进入 Settings → Pages，选择分支（通常选择 main 或 gh-pages）并保存。</li>
-        <li>部署成功后，网站地址通常为：<strong>https://gexiaopeng1201.github.io/nikumaruGames/</strong>（如果仓库名为 nikumaruGames 且用户名为 gexiaopeng1201）。</li>
-      </ol>
-      其他可选部署：Netlify、Vercel（直接拖放或连接 GitHub 仓库），操作也很简单。
-    </footer>
-  </div>
 
-  <script>
-    // 下载原文按钮
-    document.getElementById('downloadBtn').addEventListener('click', function(){
-      const text = document.getElementById('policyText').innerText;
-      const blob = new Blob([text], {type: 'text/plain;charset=utf-8'});
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'TOSandPrivacyPolicy.txt';
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      URL.revokeObjectURL(url);
-    });
-  </script>
+
 </body>
 </html>
